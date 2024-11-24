@@ -24,7 +24,7 @@ int main()
     while (1)
     {
         char cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9;
-        char contiunuity;
+        char continuty;
         int move, winner, move_validity, player, bot_move;
         char move_p1, move_p2;
         move = 9;
@@ -33,7 +33,7 @@ int main()
 
         printf("How do you want to play?\nSingle player: press 1\nMultiplayer: press 2\n");
         scanf("%d", &player);
-
+        printf("\tPress q or Q at any time to quit.\n");
         cell1 = '0' + 1;
         cell2 = '0' + 2;
         cell3 = '0' + 3;
@@ -53,7 +53,8 @@ int main()
                 move_validity = 0;
                 while (!move_validity)
                 {
-                    printf("Which block do you want to make your move, player1?(o)\n\n");
+                    printf("Which block do you want to make your move, player1?(o)");
+                    printf("\tPress q or Q at any time to quit.\n");
                     scanf(" %c", &move_p1);
                     if (move_p1 == 'q' || move_p1 == 'Q')
                     {
@@ -338,7 +339,8 @@ int main()
                 move_validity = 0;
                 while (!move_validity)
                 {
-                    printf("Which block do you want to make your move, player2?(x)\n\n");
+                    printf("Which block do you want to make your move, player2?(x)");
+                    printf("\tPress q or Q at any time to quit.\n");
                     scanf(" %c", &move_p2);
                     if (move_p2 == 'q' || move_p2 == 'Q')
                     {
@@ -605,8 +607,8 @@ int main()
         }
         printf("\nWill you want to play again?: Y or y for Yes and any other key for No: \n");
 
-        scanf(" %c", &contiunuity);
-        if (contiunuity == 'Y' || contiunuity == 'y')
+        scanf(" %c", &continuty);
+        if (continuty == 'Y' || continuty == 'y')
         {
             continue;
         }
